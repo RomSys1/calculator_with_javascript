@@ -90,4 +90,8 @@ body::after{
     deben estar al centro*/
     place-items: center;
 
+    border-top: 1px solid rgba(255.255.255.0.05);
+    border-left: 1px solid rgba(255.255.255.0.05);
+    /*sombra de tarjeta que la da como boton grande*/
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
 }
