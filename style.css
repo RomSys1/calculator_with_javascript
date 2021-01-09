@@ -98,7 +98,16 @@ body::after{
     box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
 }
 
+/*al acercar el putnero encima del elemento*/
 .container .calculator span:hover{
     transition: 0s;
     background: rgba(255,255,255,0.05);
+}
+
+/*al hacer click en el elemeto se activa un color diferente*/
+.container .calculator span:active{
+    background: #14ff47;
+    color: #192f00;
+    font-size: 24px;
+    font-weight: 500;
 }
