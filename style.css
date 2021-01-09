@@ -124,3 +124,8 @@ body::after{
     height: 150px;
 }
 
+/*mantener el igual con el fondo vidrio empañado*/
+.equal{
+    background: rgba(255,255,255,0.05);
+}
+
