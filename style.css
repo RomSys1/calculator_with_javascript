@@ -89,6 +89,8 @@ body::after{
     /*entonces dentro de cada cajita los numeros
     deben estar al centro*/
     place-items: center;
+    /*tipo de cursor*/
+    cursor: pointer;
 
     border-top: 1px solid rgba(255.255.255.0.05);
     border-left: 1px solid rgba(255.255.255.0.05);
