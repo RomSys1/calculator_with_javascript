@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+
+/*circulo 1 en fondo de color gradiente color verde*/
+body::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#186611, #5eff07);
+    clip-path: circle(22% at 30% 20%);
+}
+
+/*circulo 2 de fondo de color rojo*/
+body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ffffff, #e30b0b);
+    clip-path: circle(20% at 70% 90%);
+}
+
+/*contenedor con fondo transaparente plomo*/
+.container{
+    position: relative;
+    background: rgba(255.255.255.0.05);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    /*le da un poco de toque de vidrio grueso empañado*/
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255.255.255.0.2);
+    border-left: 1px solid rgba(255.255.255.0.2);
+    /*sombra de tarjeta que la da como boton grande*/
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+}
+
+/*hace que */
+.container .calculator{
+    position: relative;
+    display: grid;
+}
+
+/*INPUT, la caja de texto para ingresar valores*/
+.container .calculator .value{
+    grid-column: span 4;
+    height: 140px;
+    /* /4 = 75 hace que se expanda un poquito mas*/
+    width: 300px/*/4 = 75*/;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    background: transparent;
+    color: #fff;
+
+    border-top: 1px solid rgba(255.255.255.0.05);
+    border-left: 1px solid rgba(255.255.255.0.05);
+    /*sombra de tarjeta que la da como boton grande*/
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+}
+
+.container .calculator span{
+    display: grid;
+    width: 75px;
+    height: 75px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 20px;
+    user-select: none;
+    /*cada numero tiene su cajita*/
+    /*entonces dentro de cada cajita los numeros
+    deben estar al centro*/
+    place-items: center;
+
+}
